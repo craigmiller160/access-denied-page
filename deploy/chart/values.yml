@@ -1,6 +1,6 @@
 app_deployment:
-  appName: expense-tracker-ui
-  image: nexus-docker-craigmiller160.ddns.net/expense-tracker-ui:latest
+  appName: access-denied-page
+  image: nexus-docker-craigmiller160.ddns.net/access-denied-page:latest
   ports:
     - containerPort: 443
   commonProbe:
@@ -9,11 +9,11 @@ app_deployment:
       port: 443
       scheme: HTTPS
   secure_ingress:
-    name: expense-tracker-ingress
+    name: access-denied-page-ingress
     backendIsHttps: true
     hosts:
       - name: apps-craigmiller160.ddns.net
         services:
-          - path: /(expense-tracker(/.*)?)
-            serviceName: expense-tracker-ui
+          - path: /access-denied(/.*)?)
+            serviceName: access-denied-page
             portNumber: 443
