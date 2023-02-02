@@ -4,6 +4,6 @@ RUN mkdir -p /var/www/cert
 COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY ./src/index.html /var/www
 COPY ./src/style.css /var/www
-COPY /cert /var/www
+COPY ./cert /var/www
 
 ENTRYPOINT ["nginx","-g","daemon off;"]
