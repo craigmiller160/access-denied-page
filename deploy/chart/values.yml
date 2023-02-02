@@ -14,6 +14,6 @@ app_deployment:
     hosts:
       - name: apps-craigmiller160.ddns.net
         services:
-          - path: /access-denied(/.*)?)
+          - path: /access-denied(/.*)?
             serviceName: access-denied-page
             portNumber: 443
